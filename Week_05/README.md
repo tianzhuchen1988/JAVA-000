@@ -10,4 +10,8 @@ https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/
 https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/java/com/example/homework/factoryBean
 
 #### 作业题目：给前面课程提供的 Student/Klass/School 实现自动配置和 Starter
+- student-starter实现为Student自动装配及包装成starter
+- hello-starter-demo依赖student-starter，并注入Student
 
+#### 作业题目：研究一下 JDBC 接口和数据库连接池，掌握它们的设计和用法
+- jdbc-demo工程实现了以上功能，采用springboot+h2简化数据库配置及bean注入，具体的数据库操作采用原生JDBC实现
