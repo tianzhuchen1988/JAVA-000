@@ -1,0 +1,1 @@
+insert into person(name, age) values('chentz', 30);
