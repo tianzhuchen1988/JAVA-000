@@ -8,3 +8,6 @@ https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/
 https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/java/com/example/homework/beanDefinition
 - FactoryBean方式装配了Spring Bean:
 https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/java/com/example/homework/factoryBean
+
+#### 作业题目：给前面课程提供的 Student/Klass/School 实现自动配置和 Starter
+
