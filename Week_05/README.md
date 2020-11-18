@@ -10,5 +10,5 @@ https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/
 https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_05/homework/src/main/java/com/example/homework/factoryBean
 
 #### 作业题目：给前面课程提供的 Student/Klass/School 实现自动配置和 Starter
-student-starter实现为Student自动装配及包装成starter
-hello-starter-demo依赖student-starter，并注入Student
+- student-starter实现为Student自动装配及包装成starter
+- hello-starter-demo依赖student-starter，并注入Student
