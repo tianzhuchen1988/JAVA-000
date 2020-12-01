@@ -102,6 +102,26 @@
 该方式耗时太久了，所以就没等结果了~~~~
 
 ### Week07 作业题目必做二：读写分离 - 动态切换数据源版本 1.0
-基于注解的方式动态实现数据源的切换
-https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_07/mysql-proxy-demo
+- 基于注解的方式动态实现数据源的切换：https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_07/mysql-proxy-demo
+```java
+@RestController
+@RequestMapping("/test")
+public class UserController {
+
+    @Resource
+    private IUserService iUserService;
+
+    @GetMapping("/master")
+    @TargetDataSource("master")
+    public List<User> listByMaster() throws Exception {
+        return iUserService.list();
+    }
+
+    @GetMapping("/slave")
+    @TargetDataSource("slave")
+    public List<User> listBySlave() throws Exception {
+        return iUserService.list();
+    }
+}
+```
 ### Week07 作业题目必做三：读写分离 - 数据库框架版本 2.0
