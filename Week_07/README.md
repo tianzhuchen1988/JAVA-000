@@ -51,3 +51,4 @@
         System.out.println("cast : " + (end - begin) / 1000 + " s");
     }
 ```
+![耗时1](img/97510c56f2ad48c6a4f47037f414eb4.png "耗时1")
