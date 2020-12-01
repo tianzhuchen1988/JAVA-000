@@ -102,4 +102,6 @@
 该方式耗时太久了，所以就没等结果了~~~~
 
 ### Week07 作业题目必做二：读写分离 - 动态切换数据源版本 1.0
+基于注解的方式动态实现数据源的切换
+https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_07/mysql-proxy-demo
 ### Week07 作业题目必做三：读写分离 - 数据库框架版本 2.0
