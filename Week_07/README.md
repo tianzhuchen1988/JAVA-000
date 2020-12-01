@@ -1,4 +1,4 @@
-### 按自己设计的表结构，插入 100 万订单模拟数据，测试不同方式的插入效率
+### Week07 作业题目必做一：按自己设计的表结构，插入 100 万订单模拟数据，测试不同方式的插入效率
 ```java
    /**
      * 使用动态拼接SQL方式插入100万条数据测试
@@ -51,3 +51,55 @@
         System.out.println("cast : " + (end - begin) / 1000 + " s");
     }
 ```
+![耗时1](img/97510c56f2ad48c6a4f47037f414eb4.png "耗时1")
+```java
+     /**
+     * 每条insert单独执行
+     *
+     * @author chentz
+     * @date 2020/12/1 11:56
+     * @param
+     * @return void
+     */
+    public void insertPerSql() {
+        Long begin = new Date().getTime();
+        Connection conn = getConnection();
+        try {
+            for (int i = 1; i <= 1000000; i++) {
+                String sql = "INSERT INTO tb_order (order_no, user_id, address, mobile, product_code, price, product_quantity, order_amount," +
+                        "status, create_time, update_time, delete_sign) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+                PreparedStatement ps = conn.prepareStatement(sql);
+                ps.setLong(1, SnowflakeIdUtil.getIdUtilNo());
+                ps.setLong(2, SnowflakeIdUtil.getIdUtilNo());
+                ps.setString(3, "测试地址");
+                ps.setString(4, "18120868629");
+                ps.setLong(5, SnowflakeIdUtil.getIdUtilNo());
+                ps.setBigDecimal(6, new BigDecimal("0.01"));
+                ps.setInt(7, 1);
+                ps.setBigDecimal(8, new BigDecimal("0.01"));
+                ps.setByte(9, (byte)1);
+                ps.setLong(10, new Date().getTime());
+                ps.setLong(11, new Date().getTime());
+                ps.setByte(12, (byte)0);
+                ps.executeUpdate();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                // 关闭连接
+                try {
+                    conn.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        Long end = new Date().getTime();
+        System.out.println("cast : " + (end - begin) / 1000 + " s");
+    }
+```
+该方式耗时太久了，所以就没等结果了~~~~
+
+### Week07 作业题目必做二：读写分离 - 动态切换数据源版本 1.0
+### Week07 作业题目必做三：读写分离 - 数据库框架版本 2.0
