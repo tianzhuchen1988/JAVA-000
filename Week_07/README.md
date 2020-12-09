@@ -125,3 +125,6 @@ public class UserController {
 }
 ```
 ### Week07 作业题目必做三：读写分离 - 数据库框架版本 2.0
+- 基于springboot2.1.1+mybatis+sharding-jdbc3.1.0实现读写分离: https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_07/shardingsphere-jdbc-demo
+- 配置了2个dataSource: db-test0,db-test1
+- 写走db-test0, 读走db-test1
