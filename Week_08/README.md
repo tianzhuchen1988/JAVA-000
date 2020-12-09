@@ -56,4 +56,4 @@ rules:
       props:
         worker-id: 123
 ```
-- sharding-demo工程的datasource信息直接使用shardingsphere-proxy的sharding_db进行t_order的查询
+- sharding-demo工程的datasource信息直接使用shardingsphere-proxy的sharding_db进行t_order的查询：https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_08/sharding-demo
