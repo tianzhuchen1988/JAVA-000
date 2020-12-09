@@ -1,4 +1,4 @@
-### （必做）作业题目：设计对前面的订单表数据进行水平分库分表，拆分 2 个库，每个库 16 张表。并在新结构在演示常见的增删改查操作。代码、sql 和配置文件，上传到 Github。
+### 一、（必做）作业题目：设计对前面的订单表数据进行水平分库分表，拆分 2 个库，每个库 16 张表。并在新结构在演示常见的增删改查操作。代码、sql 和配置文件，上传到 Github。
 - 基于shardingsphere-proxy作为中间件进行分库分表以后的增删改查
 - 将原先order.t_order表分成order0及order1两个库的t_order_0~15
 - sharding配置文件如下:
@@ -55,3 +55,4 @@ rules:
       props:
         worker-id: 123
 ```
+- sharding-demo工程的datasource信息直接使用shardingsphere-proxy的sharding_db进行t_order的查询
