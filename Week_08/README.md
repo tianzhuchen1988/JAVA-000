@@ -57,3 +57,5 @@ rules:
         worker-id: 123
 ```
 - sharding-demo工程的datasource信息直接使用shardingsphere-proxy的sharding_db进行t_order的查询：https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_08/sharding-demo
+
+### 二、（必做）作业题目：基于 hmily TCC 或 ShardingSphere 的 Atomikos XA 实现一个简单的分布式事务应用 demo（二选一），提交到 Github。
