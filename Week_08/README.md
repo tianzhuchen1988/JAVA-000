@@ -62,4 +62,4 @@ rules:
 - https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_08/hmily-cloud-demo
 - 基于hmilyTCC实现order订单表及room-state房态表的分布式事务demo
 - order 更新状态 --> feign调用room-state 更新状态， 对应2个库 order.t_order, roomstate.t_room_state
-- 正常流程，都会调用confirm, 异常异常，主动方会调用cancel， 被调用方不会调用cancel
+- 正常流程，都会调用confirm; 异常异常，主动方会调用cancel， 被调用方不会调用cancel, demo待完善！！！
