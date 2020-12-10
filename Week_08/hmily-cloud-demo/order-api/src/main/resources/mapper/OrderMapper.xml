@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.order.mapper.OrderMapper">
+
+    <update id="updateStatus">
+        update t_order set status = 2 where id = #{id}
+    </update>
+
+    <update id="updateConfirm">
+        update t_order set status = 3 where id = #{id}
+    </update>
+
+    <update id="updateCancel">
+        update t_order set status = 4 where id = #{id}
+    </update>
+
+    <select id="findById" resultType="com.example.order.entity.Order">
+        SELECT *
+        FROM t_order where id = #{id}
+    </select>
+</mapper>

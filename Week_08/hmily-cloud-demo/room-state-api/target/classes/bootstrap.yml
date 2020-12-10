@@ -1,0 +1,42 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8091
+
+spring:
+  application:
+    name: room-state
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/room-state?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password:
+
+#feign:
+#  hystrix:
+#    enabled: true
+#
+#management:
+#  server:
+#    servlet:
+feign:
+  client:
+    config:
+      # 全局
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+      # 指定具体的feign
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+mybatis:
+  type-aliases-package: com.example.roomstate.mapper
+  mapperLocations: classpath:mapper/*Mapper.xml
