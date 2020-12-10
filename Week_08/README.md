@@ -60,5 +60,6 @@ rules:
 
 ### 二、（必做）作业题目：基于 hmily TCC 或 ShardingSphere 的 Atomikos XA 实现一个简单的分布式事务应用 demo（二选一），提交到 Github。
 - https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_08/hmily-cloud-demo
+- 基于hmilyTCC实现order订单表及room-state房态表的分布式事务demo
 - order 更新状态 --> feign调用room-state 更新状态， 对应2个库 order.t_order, roomstate.t_room_state
 - 正常流程，都会调用confirm, 异常异常，主动方会调用cancel， 被调用方不会调用cancel
