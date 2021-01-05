@@ -4,4 +4,4 @@
 - 代码路径：https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_09/rpc01
 
 ### 2、（必做）结合 dubbo+hmily，实现一个 TCC 外汇交易处理，代码提交到 GitHub:
-
+- 代码路径：https://github.com/tianzhuchen1988/JAVA-000/tree/main/Week_09/rpc02
