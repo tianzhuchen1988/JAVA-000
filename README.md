@@ -35,3 +35,61 @@ redolog, 到MySQL高可用，主从复制，读写分离，以及数据库中间
 还学了Redis的哨兵、Cluster的Hash槽，Redis的RDB和AOF，最爱听的还有秦大哥讲的最佳实践，介绍了大厂里使用Redis的流程和规范，涨了见识。
 - 第九大模块：分布式消息队列，从内存队列到一代MQ，二代MQ和三代MQ，学习到了MQ的整个发展历程及未来的趋势，特别从消息队列的推拉模式，联想到
 了自己一直以来学习的误区，容易进入被动接受，不够主动地去吸收一些知识，导致自己感觉越学越累，越学越多。
+# Java训练营知识体系总结
+- JVM
+		- JVM基础知识：字节码，类加载器，内存模型，JVM常用的启动参数
+		- 垃圾收集：GCRoot、GC算法，常见的垃圾收集器以及各自适合的场景，GC的并发与并行，STW的含义
+		- JVM诊断和调优工具：JMap, JStat, JStack，JConsole, JVirtualVm
+		- JVM调优的最佳实践：分配速率和过早晋升
+	NIO
+		同步与异步，阻塞与非阻塞的区别
+		同步阻塞IO模型BIO与同步非阻塞IO模型NIO
+		Reactor原理
+		Netty网络框架基本使用及核心模块
+		常见的性能压测工具，SuperBanchmark
+	并发编程
+		并发基础：多线程含义，线程安全，原子性、可见性和有序性
+		线程池的原理和核心参数，4种拒绝策略
+		Future、FutureTask
+		Fork/Join
+		CountDownLatch、Samephere信号量
+		wait/notify
+		有锁技术：Synchronize, Lock/Condition
+		无锁技术：CAS，原子类，悲观锁和乐观锁
+	Spring和ORM等框架
+		Spring基础知识：IOC和AOP
+		Spring Bean生命周期
+		SpringBoot主动装配、约定大于配置、嵌入式容器，自定义封装starter
+		SpringCloud微服务套件
+	MySQL
+		MySQL整体架构
+		binlog、redolog
+		索引
+		ACID
+		MVCC
+		MySQL调优思路和最佳实践
+		主从复制
+		读写分离
+		CAP理论、Base理论
+		分布式事务，强一致性XA和柔性事务TCC、SAGA和AT
+	分库分表
+		垂直拆分和水平拆分
+		数据库中间件SharingSphere
+	RPC和微服务
+		RPC原理，Stub和Skeleton
+		常见的RPC框架，Thrift、Protocol Buffer、 GRpc
+		微服务架构，服务注册发现、配置中心、服务划分、服务调用链跟踪、熔断限流
+		流量网关和业务网关
+		Dubbo核心
+	分布式缓存
+		缓存原理
+		缓存常见问题，缓存雪崩、缓存穿透和缓存击穿
+		Redis底层数据结构
+		Redis RDB和AOF
+		Redis哨兵机制
+		Redis Cluster
+	分布式消息队列
+		消息队列原理，生产消费者模型
+		消息队列基础：消息模式点对点，发布订阅，常见的消息协议， 推拉模式
+		消息Qos(最多一次，最少一次，有且仅有一次)、消息幂等、消息堆积
+		二代MQ Kafaka底层架构，RocketMQ由来以及与Kafaka的关系
