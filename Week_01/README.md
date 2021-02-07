@@ -8,3 +8,7 @@
 因为线上没有权限查看，所以只能使用开发环境的JVM参数配置
 - jstat -gc 10221 1000 1000 查看当前GC的情况
 ![image](https://github.com/tianzhuchen1988/JAVA-000/blob/main/Week_01/1612682070366.jpg)
+- jmap -heap 10221 查看JVM当前堆的使用情况
+![image](https://github.com/tianzhuchen1988/JAVA-000/blob/main/Week_01/1612682319665.jpg)
+- JVM参数配置
+![image](https://github.com/tianzhuchen1988/JAVA-000/blob/main/Week_01/1612682519655.jpg)
